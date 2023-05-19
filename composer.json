@@ -1,0 +1,28 @@
+{
+	"name" : "zoho/zoi-php-sdk",
+	"description" : "PHP SDK for Zoho Office Integrator",
+	"type" : "sdk",
+	"authors" : [
+		{
+			"name" : "Zoho Office Integrator Team",
+			"email" : "support@zohoofficeapi.com",
+			"homepage" : "https://www.zoho.com/officeplatform/integrator",
+			"role" : "Developer"
+		}
+	],
+	"require" : {
+		"php" : ">=7.0",
+		"ext-json" : "*",
+		"ext-curl" : "*"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : ">=5.7"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"" : "src/"
+		}
+	},
+	"license": "Apache-2.0",
+	"homepage" : "https://www.zoho.com/officeplatform/integrator"
+}
