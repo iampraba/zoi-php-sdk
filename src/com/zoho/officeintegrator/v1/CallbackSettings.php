@@ -12,6 +12,7 @@ class CallbackSettings implements Model
 	private  $retries;
 	private  $timeout;
 	private  $saveUrlParams;
+	private  $saveUrlHeaders;
 	private  $keyModified=array();
 
 	/**
@@ -137,6 +138,27 @@ class CallbackSettings implements Model
 	{
 		$this->saveUrlParams=$saveUrlParams; 
 		$this->keyModified['save_url_params'] = 1; 
+
+	}
+
+	/**
+	 * The method to get the saveUrlHeaders
+	 * @return array A array representing the saveUrlHeaders
+	 */
+	public  function getSaveUrlHeaders()
+	{
+		return $this->saveUrlHeaders; 
+
+	}
+
+	/**
+	 * The method to set the value to saveUrlHeaders
+	 * @param array $saveUrlHeaders A array
+	 */
+	public  function setSaveUrlHeaders(array $saveUrlHeaders)
+	{
+		$this->saveUrlHeaders=$saveUrlHeaders; 
+		$this->keyModified['save_url_headers'] = 1; 
 
 	}
 

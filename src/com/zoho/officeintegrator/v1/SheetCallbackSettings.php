@@ -8,8 +8,8 @@ class SheetCallbackSettings implements Model
 
 	private  $saveFormat;
 	private  $saveUrl;
-	private  $savetype;
 	private  $saveUrlParams;
+	private  $saveUrlHeaders;
 	private  $keyModified=array();
 
 	/**
@@ -55,27 +55,6 @@ class SheetCallbackSettings implements Model
 	}
 
 	/**
-	 * The method to get the savetype
-	 * @return string A string representing the savetype
-	 */
-	public  function getSavetype()
-	{
-		return $this->savetype; 
-
-	}
-
-	/**
-	 * The method to set the value to savetype
-	 * @param string $savetype A string
-	 */
-	public  function setSavetype(string $savetype)
-	{
-		$this->savetype=$savetype; 
-		$this->keyModified['savetype'] = 1; 
-
-	}
-
-	/**
 	 * The method to get the saveUrlParams
 	 * @return array A array representing the saveUrlParams
 	 */
@@ -93,6 +72,27 @@ class SheetCallbackSettings implements Model
 	{
 		$this->saveUrlParams=$saveUrlParams; 
 		$this->keyModified['save_url_params'] = 1; 
+
+	}
+
+	/**
+	 * The method to get the saveUrlHeaders
+	 * @return array A array representing the saveUrlHeaders
+	 */
+	public  function getSaveUrlHeaders()
+	{
+		return $this->saveUrlHeaders; 
+
+	}
+
+	/**
+	 * The method to set the value to saveUrlHeaders
+	 * @param array $saveUrlHeaders A array
+	 */
+	public  function setSaveUrlHeaders(array $saveUrlHeaders)
+	{
+		$this->saveUrlHeaders=$saveUrlHeaders; 
+		$this->keyModified['save_url_headers'] = 1; 
 
 	}
 

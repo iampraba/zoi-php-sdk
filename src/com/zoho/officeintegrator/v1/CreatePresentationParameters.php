@@ -60,7 +60,7 @@ class CreatePresentationParameters implements Model
 
 	/**
 	 * The method to get the callbackSettings
-	 * @return ShowCallbackSettings An instance of ShowCallbackSettings
+	 * @return CallbackSettings An instance of CallbackSettings
 	 */
 	public  function getCallbackSettings()
 	{
@@ -70,9 +70,9 @@ class CreatePresentationParameters implements Model
 
 	/**
 	 * The method to set the value to callbackSettings
-	 * @param ShowCallbackSettings $callbackSettings An instance of ShowCallbackSettings
+	 * @param CallbackSettings $callbackSettings An instance of CallbackSettings
 	 */
-	public  function setCallbackSettings(ShowCallbackSettings $callbackSettings)
+	public  function setCallbackSettings(CallbackSettings $callbackSettings)
 	{
 		$this->callbackSettings=$callbackSettings; 
 		$this->keyModified['callback_settings'] = 1; 
