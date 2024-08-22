@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class SheetUiOptions implements Model
 {
@@ -11,7 +11,7 @@ class SheetUiOptions implements Model
 
 	/**
 	 * The method to get the saveButton
-	 * @return string A string representing the saveButton
+	 * @return string | null A string representing the saveButton
 	 */
 	public  function getSaveButton()
 	{
@@ -33,7 +33,7 @@ class SheetUiOptions implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

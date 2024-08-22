@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class SessionInfo implements Model
 {
@@ -17,7 +17,7 @@ class SessionInfo implements Model
 
 	/**
 	 * The method to get the documentId
-	 * @return string A string representing the documentId
+	 * @return string | null A string representing the documentId
 	 */
 	public  function getDocumentId()
 	{
@@ -38,7 +38,7 @@ class SessionInfo implements Model
 
 	/**
 	 * The method to get the createdTimeMs
-	 * @return string A string representing the createdTimeMs
+	 * @return string | null A string representing the createdTimeMs
 	 */
 	public  function getCreatedTimeMs()
 	{
@@ -59,7 +59,7 @@ class SessionInfo implements Model
 
 	/**
 	 * The method to get the createdTime
-	 * @return string A string representing the createdTime
+	 * @return string | null A string representing the createdTime
 	 */
 	public  function getCreatedTime()
 	{
@@ -80,7 +80,7 @@ class SessionInfo implements Model
 
 	/**
 	 * The method to get the expiresOnMs
-	 * @return string A string representing the expiresOnMs
+	 * @return string | null A string representing the expiresOnMs
 	 */
 	public  function getExpiresOnMs()
 	{
@@ -101,7 +101,7 @@ class SessionInfo implements Model
 
 	/**
 	 * The method to get the expiresOn
-	 * @return string A string representing the expiresOn
+	 * @return string | null A string representing the expiresOn
 	 */
 	public  function getExpiresOn()
 	{
@@ -122,7 +122,7 @@ class SessionInfo implements Model
 
 	/**
 	 * The method to get the sessionUrl
-	 * @return string A string representing the sessionUrl
+	 * @return string | null A string representing the sessionUrl
 	 */
 	public  function getSessionUrl()
 	{
@@ -143,7 +143,7 @@ class SessionInfo implements Model
 
 	/**
 	 * The method to get the sessionDeleteUrl
-	 * @return string A string representing the sessionDeleteUrl
+	 * @return string | null A string representing the sessionDeleteUrl
 	 */
 	public  function getSessionDeleteUrl()
 	{
@@ -165,7 +165,7 @@ class SessionInfo implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

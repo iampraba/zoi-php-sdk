@@ -1,8 +1,7 @@
 <?php
-
 namespace com\zoho\api\authenticator;
 
-use com\zoho\util\APIHTTPConnector;
+use com\zoho\officeintegrator\util\APIHTTPConnector;
 
 /**
  * This interface verifies and sets token to APIHTTPConnector instance.
@@ -10,13 +9,17 @@ use com\zoho\util\APIHTTPConnector;
 interface Token
 {
     /**
-     * This method to set authentication token to APIHTTPConnector instance.
-     * @param APIHTTPConnector $connector A APIHTTPConnector class instance.
-     */
-    public function authenticate(APIHTTPConnector $urlConnection);
+	 * This method to set authentication token to APIHTTPConnector instance.
+	 * 
+	 * @param APIHTTPConnector $urlConnection A APIHTTPConnector class instance.
+	 */
+    public function authenticate(APIHTTPConnector $urlConnection, $config);
 
-    /**
-     * The method to remove the current token from the Store.
-     */
-    public function remove();
+	public function remove();
+
+	public function generateToken();
+
+	public function getId();
+
+	public function getAuthenticationSchema();
 }

@@ -1,8 +1,8 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\StreamWrapper;
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\StreamWrapper;
+use com\zoho\officeintegrator\util\Model;
 
 class CreateSheetParameters implements Model
 {
@@ -19,7 +19,7 @@ class CreateSheetParameters implements Model
 
 	/**
 	 * The method to get the url
-	 * @return string A string representing the url
+	 * @return string | null A string representing the url
 	 */
 	public  function getUrl()
 	{
@@ -40,7 +40,7 @@ class CreateSheetParameters implements Model
 
 	/**
 	 * The method to get the document
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getDocument()
 	{
@@ -61,7 +61,7 @@ class CreateSheetParameters implements Model
 
 	/**
 	 * The method to get the callbackSettings
-	 * @return SheetCallbackSettings An instance of SheetCallbackSettings
+	 * @return SheetCallbackSettings | null An instance of SheetCallbackSettings
 	 */
 	public  function getCallbackSettings()
 	{
@@ -82,7 +82,7 @@ class CreateSheetParameters implements Model
 
 	/**
 	 * The method to get the editorSettings
-	 * @return SheetEditorSettings An instance of SheetEditorSettings
+	 * @return SheetEditorSettings | null An instance of SheetEditorSettings
 	 */
 	public  function getEditorSettings()
 	{
@@ -103,7 +103,7 @@ class CreateSheetParameters implements Model
 
 	/**
 	 * The method to get the permissions
-	 * @return array A array representing the permissions
+	 * @return array | null A array representing the permissions
 	 */
 	public  function getPermissions()
 	{
@@ -124,7 +124,7 @@ class CreateSheetParameters implements Model
 
 	/**
 	 * The method to get the documentInfo
-	 * @return DocumentInfo An instance of DocumentInfo
+	 * @return DocumentInfo | null An instance of DocumentInfo
 	 */
 	public  function getDocumentInfo()
 	{
@@ -145,7 +145,7 @@ class CreateSheetParameters implements Model
 
 	/**
 	 * The method to get the userInfo
-	 * @return SheetUserSettings An instance of SheetUserSettings
+	 * @return SheetUserSettings | null An instance of SheetUserSettings
 	 */
 	public  function getUserInfo()
 	{
@@ -166,7 +166,7 @@ class CreateSheetParameters implements Model
 
 	/**
 	 * The method to get the uiOptions
-	 * @return SheetUiOptions An instance of SheetUiOptions
+	 * @return SheetUiOptions | null An instance of SheetUiOptions
 	 */
 	public  function getUiOptions()
 	{
@@ -188,7 +188,7 @@ class CreateSheetParameters implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

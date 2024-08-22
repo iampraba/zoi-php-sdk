@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class PreviewDocumentInfo implements Model
 {
@@ -11,7 +11,7 @@ class PreviewDocumentInfo implements Model
 
 	/**
 	 * The method to get the documentName
-	 * @return string A string representing the documentName
+	 * @return string | null A string representing the documentName
 	 */
 	public  function getDocumentName()
 	{
@@ -33,7 +33,7 @@ class PreviewDocumentInfo implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

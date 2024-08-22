@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class AllSessionsResponse implements Model, WriterResponseHandler
 {
@@ -20,7 +20,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the documentId
-	 * @return string A string representing the documentId
+	 * @return string | null A string representing the documentId
 	 */
 	public  function getDocumentId()
 	{
@@ -41,7 +41,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the collaboratorsCount
-	 * @return int A int representing the collaboratorsCount
+	 * @return int | null A int representing the collaboratorsCount
 	 */
 	public  function getCollaboratorsCount()
 	{
@@ -62,7 +62,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the activeSessionsCount
-	 * @return int A int representing the activeSessionsCount
+	 * @return int | null A int representing the activeSessionsCount
 	 */
 	public  function getActiveSessionsCount()
 	{
@@ -83,7 +83,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the documentName
-	 * @return string A string representing the documentName
+	 * @return string | null A string representing the documentName
 	 */
 	public  function getDocumentName()
 	{
@@ -104,7 +104,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the documentType
-	 * @return string A string representing the documentType
+	 * @return string | null A string representing the documentType
 	 */
 	public  function getDocumentType()
 	{
@@ -125,7 +125,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the createdTime
-	 * @return string A string representing the createdTime
+	 * @return string | null A string representing the createdTime
 	 */
 	public  function getCreatedTime()
 	{
@@ -146,7 +146,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the createdTimeMs
-	 * @return string A string representing the createdTimeMs
+	 * @return string | null A string representing the createdTimeMs
 	 */
 	public  function getCreatedTimeMs()
 	{
@@ -167,7 +167,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the expiresOn
-	 * @return string A string representing the expiresOn
+	 * @return string | null A string representing the expiresOn
 	 */
 	public  function getExpiresOn()
 	{
@@ -188,7 +188,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the expiresOnMs
-	 * @return string A string representing the expiresOnMs
+	 * @return string | null A string representing the expiresOnMs
 	 */
 	public  function getExpiresOnMs()
 	{
@@ -209,7 +209,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the sessions
-	 * @return array A array representing the sessions
+	 * @return array | null A array representing the sessions
 	 */
 	public  function getSessions()
 	{
@@ -231,7 +231,7 @@ class AllSessionsResponse implements Model, WriterResponseHandler
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

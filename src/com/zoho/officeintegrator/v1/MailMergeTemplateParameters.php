@@ -1,8 +1,8 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\StreamWrapper;
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\StreamWrapper;
+use com\zoho\officeintegrator\util\Model;
 
 class MailMergeTemplateParameters implements Model
 {
@@ -19,11 +19,12 @@ class MailMergeTemplateParameters implements Model
 	private  $permissions;
 	private  $documentInfo;
 	private  $userInfo;
+	private  $uiOptions;
 	private  $keyModified=array();
 
 	/**
 	 * The method to get the url
-	 * @return string A string representing the url
+	 * @return string | null A string representing the url
 	 */
 	public  function getUrl()
 	{
@@ -44,7 +45,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the document
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getDocument()
 	{
@@ -65,7 +66,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the mergeDataCsvContent
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getMergeDataCsvContent()
 	{
@@ -86,7 +87,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the mergeDataJsonContent
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getMergeDataJsonContent()
 	{
@@ -107,7 +108,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the mergeDataCsvUrl
-	 * @return string A string representing the mergeDataCsvUrl
+	 * @return string | null A string representing the mergeDataCsvUrl
 	 */
 	public  function getMergeDataCsvUrl()
 	{
@@ -128,7 +129,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the mergeDataJsonUrl
-	 * @return string A string representing the mergeDataJsonUrl
+	 * @return string | null A string representing the mergeDataJsonUrl
 	 */
 	public  function getMergeDataJsonUrl()
 	{
@@ -149,7 +150,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the callbackSettings
-	 * @return CallbackSettings An instance of CallbackSettings
+	 * @return CallbackSettings | null An instance of CallbackSettings
 	 */
 	public  function getCallbackSettings()
 	{
@@ -170,7 +171,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the documentDefaults
-	 * @return DocumentDefaults An instance of DocumentDefaults
+	 * @return DocumentDefaults | null An instance of DocumentDefaults
 	 */
 	public  function getDocumentDefaults()
 	{
@@ -191,7 +192,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the editorSettings
-	 * @return EditorSettings An instance of EditorSettings
+	 * @return EditorSettings | null An instance of EditorSettings
 	 */
 	public  function getEditorSettings()
 	{
@@ -212,7 +213,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the permissions
-	 * @return array A array representing the permissions
+	 * @return array | null A array representing the permissions
 	 */
 	public  function getPermissions()
 	{
@@ -233,7 +234,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the documentInfo
-	 * @return DocumentInfo An instance of DocumentInfo
+	 * @return DocumentInfo | null An instance of DocumentInfo
 	 */
 	public  function getDocumentInfo()
 	{
@@ -254,7 +255,7 @@ class MailMergeTemplateParameters implements Model
 
 	/**
 	 * The method to get the userInfo
-	 * @return UserInfo An instance of UserInfo
+	 * @return UserInfo | null An instance of UserInfo
 	 */
 	public  function getUserInfo()
 	{
@@ -274,9 +275,30 @@ class MailMergeTemplateParameters implements Model
 	}
 
 	/**
+	 * The method to get the uiOptions
+	 * @return UiOptions | null An instance of UiOptions
+	 */
+	public  function getUiOptions()
+	{
+		return $this->uiOptions; 
+
+	}
+
+	/**
+	 * The method to set the value to uiOptions
+	 * @param UiOptions $uiOptions An instance of UiOptions
+	 */
+	public  function setUiOptions(UiOptions $uiOptions)
+	{
+		$this->uiOptions=$uiOptions; 
+		$this->keyModified['ui_options'] = 1; 
+
+	}
+
+	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

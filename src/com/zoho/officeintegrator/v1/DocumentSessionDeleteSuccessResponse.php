@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class DocumentSessionDeleteSuccessResponse implements Model, WriterResponseHandler
 {
@@ -11,7 +11,7 @@ class DocumentSessionDeleteSuccessResponse implements Model, WriterResponseHandl
 
 	/**
 	 * The method to get the sessionDeleted
-	 * @return bool A bool representing the sessionDeleted
+	 * @return bool | null A bool representing the sessionDeleted
 	 */
 	public  function getSessionDeleted()
 	{
@@ -33,7 +33,7 @@ class DocumentSessionDeleteSuccessResponse implements Model, WriterResponseHandl
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

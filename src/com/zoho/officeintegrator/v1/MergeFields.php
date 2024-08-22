@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class MergeFields implements Model
 {
@@ -13,7 +13,7 @@ class MergeFields implements Model
 
 	/**
 	 * The method to get the id
-	 * @return string A string representing the id
+	 * @return string | null A string representing the id
 	 */
 	public  function getId()
 	{
@@ -34,7 +34,7 @@ class MergeFields implements Model
 
 	/**
 	 * The method to get the displayName
-	 * @return string A string representing the displayName
+	 * @return string | null A string representing the displayName
 	 */
 	public  function getDisplayName()
 	{
@@ -55,7 +55,7 @@ class MergeFields implements Model
 
 	/**
 	 * The method to get the type
-	 * @return string A string representing the type
+	 * @return string | null A string representing the type
 	 */
 	public  function getType()
 	{
@@ -77,7 +77,7 @@ class MergeFields implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

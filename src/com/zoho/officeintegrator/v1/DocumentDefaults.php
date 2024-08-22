@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class DocumentDefaults implements Model
 {
@@ -17,7 +17,7 @@ class DocumentDefaults implements Model
 
 	/**
 	 * The method to get the orientation
-	 * @return string A string representing the orientation
+	 * @return string | null A string representing the orientation
 	 */
 	public  function getOrientation()
 	{
@@ -38,7 +38,7 @@ class DocumentDefaults implements Model
 
 	/**
 	 * The method to get the paperSize
-	 * @return string A string representing the paperSize
+	 * @return string | null A string representing the paperSize
 	 */
 	public  function getPaperSize()
 	{
@@ -59,7 +59,7 @@ class DocumentDefaults implements Model
 
 	/**
 	 * The method to get the fontName
-	 * @return string A string representing the fontName
+	 * @return string | null A string representing the fontName
 	 */
 	public  function getFontName()
 	{
@@ -80,7 +80,7 @@ class DocumentDefaults implements Model
 
 	/**
 	 * The method to get the fontSize
-	 * @return int A int representing the fontSize
+	 * @return int | null A int representing the fontSize
 	 */
 	public  function getFontSize()
 	{
@@ -101,7 +101,7 @@ class DocumentDefaults implements Model
 
 	/**
 	 * The method to get the trackChanges
-	 * @return string A string representing the trackChanges
+	 * @return string | null A string representing the trackChanges
 	 */
 	public  function getTrackChanges()
 	{
@@ -122,7 +122,7 @@ class DocumentDefaults implements Model
 
 	/**
 	 * The method to get the language
-	 * @return string A string representing the language
+	 * @return string | null A string representing the language
 	 */
 	public  function getLanguage()
 	{
@@ -143,7 +143,7 @@ class DocumentDefaults implements Model
 
 	/**
 	 * The method to get the margin
-	 * @return Margin An instance of Margin
+	 * @return Margin | null An instance of Margin
 	 */
 	public  function getMargin()
 	{
@@ -165,7 +165,7 @@ class DocumentDefaults implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

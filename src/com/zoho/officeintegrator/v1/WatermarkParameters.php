@@ -1,8 +1,8 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\StreamWrapper;
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\StreamWrapper;
+use com\zoho\officeintegrator\util\Model;
 
 class WatermarkParameters implements Model
 {
@@ -14,7 +14,7 @@ class WatermarkParameters implements Model
 
 	/**
 	 * The method to get the url
-	 * @return string A string representing the url
+	 * @return string | null A string representing the url
 	 */
 	public  function getUrl()
 	{
@@ -35,7 +35,7 @@ class WatermarkParameters implements Model
 
 	/**
 	 * The method to get the document
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getDocument()
 	{
@@ -56,7 +56,7 @@ class WatermarkParameters implements Model
 
 	/**
 	 * The method to get the watermarkSettings
-	 * @return WatermarkSettings An instance of WatermarkSettings
+	 * @return WatermarkSettings | null An instance of WatermarkSettings
 	 */
 	public  function getWatermarkSettings()
 	{
@@ -78,7 +78,7 @@ class WatermarkParameters implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

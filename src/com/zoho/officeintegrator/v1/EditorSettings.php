@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class EditorSettings implements Model
 {
@@ -13,7 +13,7 @@ class EditorSettings implements Model
 
 	/**
 	 * The method to get the unit
-	 * @return string A string representing the unit
+	 * @return string | null A string representing the unit
 	 */
 	public  function getUnit()
 	{
@@ -34,7 +34,7 @@ class EditorSettings implements Model
 
 	/**
 	 * The method to get the language
-	 * @return string A string representing the language
+	 * @return string | null A string representing the language
 	 */
 	public  function getLanguage()
 	{
@@ -55,7 +55,7 @@ class EditorSettings implements Model
 
 	/**
 	 * The method to get the view
-	 * @return string A string representing the view
+	 * @return string | null A string representing the view
 	 */
 	public  function getView()
 	{
@@ -77,7 +77,7 @@ class EditorSettings implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

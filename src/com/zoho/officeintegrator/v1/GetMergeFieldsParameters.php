@@ -1,8 +1,8 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\StreamWrapper;
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\StreamWrapper;
+use com\zoho\officeintegrator\util\Model;
 
 class GetMergeFieldsParameters implements Model
 {
@@ -13,7 +13,7 @@ class GetMergeFieldsParameters implements Model
 
 	/**
 	 * The method to get the fileContent
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getFileContent()
 	{
@@ -34,7 +34,7 @@ class GetMergeFieldsParameters implements Model
 
 	/**
 	 * The method to get the fileUrl
-	 * @return string A string representing the fileUrl
+	 * @return string | null A string representing the fileUrl
 	 */
 	public  function getFileUrl()
 	{
@@ -56,7 +56,7 @@ class GetMergeFieldsParameters implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

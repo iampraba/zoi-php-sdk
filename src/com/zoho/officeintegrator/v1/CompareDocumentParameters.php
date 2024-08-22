@@ -1,8 +1,8 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\StreamWrapper;
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\StreamWrapper;
+use com\zoho\officeintegrator\util\Model;
 
 class CompareDocumentParameters implements Model
 {
@@ -17,7 +17,7 @@ class CompareDocumentParameters implements Model
 
 	/**
 	 * The method to get the document1
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getDocument1()
 	{
@@ -38,7 +38,7 @@ class CompareDocumentParameters implements Model
 
 	/**
 	 * The method to get the url1
-	 * @return string A string representing the url1
+	 * @return string | null A string representing the url1
 	 */
 	public  function getUrl1()
 	{
@@ -59,7 +59,7 @@ class CompareDocumentParameters implements Model
 
 	/**
 	 * The method to get the document2
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getDocument2()
 	{
@@ -80,7 +80,7 @@ class CompareDocumentParameters implements Model
 
 	/**
 	 * The method to get the url2
-	 * @return string A string representing the url2
+	 * @return string | null A string representing the url2
 	 */
 	public  function getUrl2()
 	{
@@ -101,7 +101,7 @@ class CompareDocumentParameters implements Model
 
 	/**
 	 * The method to get the title
-	 * @return string A string representing the title
+	 * @return string | null A string representing the title
 	 */
 	public  function getTitle()
 	{
@@ -122,7 +122,7 @@ class CompareDocumentParameters implements Model
 
 	/**
 	 * The method to get the lang
-	 * @return string A string representing the lang
+	 * @return string | null A string representing the lang
 	 */
 	public  function getLang()
 	{
@@ -144,7 +144,7 @@ class CompareDocumentParameters implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class FillableSubmissionSettings implements Model
 {
@@ -13,7 +13,7 @@ class FillableSubmissionSettings implements Model
 
 	/**
 	 * The method to get the callbackOptions
-	 * @return FillableCallbackSettings An instance of FillableCallbackSettings
+	 * @return FillableCallbackSettings | null An instance of FillableCallbackSettings
 	 */
 	public  function getCallbackOptions()
 	{
@@ -34,7 +34,7 @@ class FillableSubmissionSettings implements Model
 
 	/**
 	 * The method to get the redirectUrl
-	 * @return string A string representing the redirectUrl
+	 * @return string | null A string representing the redirectUrl
 	 */
 	public  function getRedirectUrl()
 	{
@@ -55,7 +55,7 @@ class FillableSubmissionSettings implements Model
 
 	/**
 	 * The method to get the onsubmitMessage
-	 * @return string A string representing the onsubmitMessage
+	 * @return string | null A string representing the onsubmitMessage
 	 */
 	public  function getOnsubmitMessage()
 	{
@@ -77,7 +77,7 @@ class FillableSubmissionSettings implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

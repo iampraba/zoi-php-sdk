@@ -1,8 +1,8 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\StreamWrapper;
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\StreamWrapper;
+use com\zoho\officeintegrator\util\Model;
 
 class MergeAndDownloadDocumentParameters implements Model
 {
@@ -20,7 +20,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the fileContent
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getFileContent()
 	{
@@ -41,7 +41,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the fileUrl
-	 * @return string A string representing the fileUrl
+	 * @return string | null A string representing the fileUrl
 	 */
 	public  function getFileUrl()
 	{
@@ -62,7 +62,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the outputFormat
-	 * @return string A string representing the outputFormat
+	 * @return string | null A string representing the outputFormat
 	 */
 	public  function getOutputFormat()
 	{
@@ -83,7 +83,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the mergeData
-	 * @return array A array representing the mergeData
+	 * @return array | null A array representing the mergeData
 	 */
 	public  function getMergeData()
 	{
@@ -104,7 +104,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the mergeDataCsvContent
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getMergeDataCsvContent()
 	{
@@ -125,7 +125,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the mergeDataJsonContent
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getMergeDataJsonContent()
 	{
@@ -146,7 +146,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the mergeDataCsvUrl
-	 * @return string A string representing the mergeDataCsvUrl
+	 * @return string | null A string representing the mergeDataCsvUrl
 	 */
 	public  function getMergeDataCsvUrl()
 	{
@@ -167,7 +167,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the mergeDataJsonUrl
-	 * @return string A string representing the mergeDataJsonUrl
+	 * @return string | null A string representing the mergeDataJsonUrl
 	 */
 	public  function getMergeDataJsonUrl()
 	{
@@ -188,7 +188,7 @@ class MergeAndDownloadDocumentParameters implements Model
 
 	/**
 	 * The method to get the password
-	 * @return string A string representing the password
+	 * @return string | null A string representing the password
 	 */
 	public  function getPassword()
 	{
@@ -210,7 +210,7 @@ class MergeAndDownloadDocumentParameters implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

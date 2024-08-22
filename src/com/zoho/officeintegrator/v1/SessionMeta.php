@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class SessionMeta implements Model, WriterResponseHandler, SheetResponseHandler, ShowResponseHandler
 {
@@ -13,7 +13,7 @@ class SessionMeta implements Model, WriterResponseHandler, SheetResponseHandler,
 
 	/**
 	 * The method to get the status
-	 * @return string A string representing the status
+	 * @return string | null A string representing the status
 	 */
 	public  function getStatus()
 	{
@@ -34,7 +34,7 @@ class SessionMeta implements Model, WriterResponseHandler, SheetResponseHandler,
 
 	/**
 	 * The method to get the info
-	 * @return SessionInfo An instance of SessionInfo
+	 * @return SessionInfo | null An instance of SessionInfo
 	 */
 	public  function getInfo()
 	{
@@ -55,7 +55,7 @@ class SessionMeta implements Model, WriterResponseHandler, SheetResponseHandler,
 
 	/**
 	 * The method to get the userInfo
-	 * @return SessionUserInfo An instance of SessionUserInfo
+	 * @return SessionUserInfo | null An instance of SessionUserInfo
 	 */
 	public  function getUserInfo()
 	{
@@ -77,7 +77,7 @@ class SessionMeta implements Model, WriterResponseHandler, SheetResponseHandler,
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

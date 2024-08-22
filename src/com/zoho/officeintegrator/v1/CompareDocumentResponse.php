@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class CompareDocumentResponse implements Model, WriterResponseHandler
 {
@@ -12,7 +12,7 @@ class CompareDocumentResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the compareUrl
-	 * @return string A string representing the compareUrl
+	 * @return string | null A string representing the compareUrl
 	 */
 	public  function getCompareUrl()
 	{
@@ -33,7 +33,7 @@ class CompareDocumentResponse implements Model, WriterResponseHandler
 
 	/**
 	 * The method to get the sessionDeleteUrl
-	 * @return string A string representing the sessionDeleteUrl
+	 * @return string | null A string representing the sessionDeleteUrl
 	 */
 	public  function getSessionDeleteUrl()
 	{
@@ -55,7 +55,7 @@ class CompareDocumentResponse implements Model, WriterResponseHandler
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{
