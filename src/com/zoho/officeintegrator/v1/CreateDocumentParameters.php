@@ -1,8 +1,8 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\StreamWrapper;
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\StreamWrapper;
+use com\zoho\officeintegrator\util\Model;
 
 class CreateDocumentParameters implements Model
 {
@@ -20,7 +20,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the url
-	 * @return string A string representing the url
+	 * @return string | null A string representing the url
 	 */
 	public  function getUrl()
 	{
@@ -41,7 +41,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the document
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getDocument()
 	{
@@ -62,7 +62,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the callbackSettings
-	 * @return CallbackSettings An instance of CallbackSettings
+	 * @return CallbackSettings | null An instance of CallbackSettings
 	 */
 	public  function getCallbackSettings()
 	{
@@ -83,7 +83,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the documentDefaults
-	 * @return DocumentDefaults An instance of DocumentDefaults
+	 * @return DocumentDefaults | null An instance of DocumentDefaults
 	 */
 	public  function getDocumentDefaults()
 	{
@@ -104,7 +104,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the editorSettings
-	 * @return EditorSettings An instance of EditorSettings
+	 * @return EditorSettings | null An instance of EditorSettings
 	 */
 	public  function getEditorSettings()
 	{
@@ -125,7 +125,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the permissions
-	 * @return array A array representing the permissions
+	 * @return array | null A array representing the permissions
 	 */
 	public  function getPermissions()
 	{
@@ -146,7 +146,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the documentInfo
-	 * @return DocumentInfo An instance of DocumentInfo
+	 * @return DocumentInfo | null An instance of DocumentInfo
 	 */
 	public  function getDocumentInfo()
 	{
@@ -167,7 +167,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the userInfo
-	 * @return UserInfo An instance of UserInfo
+	 * @return UserInfo | null An instance of UserInfo
 	 */
 	public  function getUserInfo()
 	{
@@ -188,7 +188,7 @@ class CreateDocumentParameters implements Model
 
 	/**
 	 * The method to get the uiOptions
-	 * @return UiOptions An instance of UiOptions
+	 * @return UiOptions | null An instance of UiOptions
 	 */
 	public  function getUiOptions()
 	{
@@ -210,7 +210,7 @@ class CreateDocumentParameters implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

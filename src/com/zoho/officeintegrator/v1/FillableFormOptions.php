@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class FillableFormOptions implements Model
 {
@@ -13,7 +13,7 @@ class FillableFormOptions implements Model
 
 	/**
 	 * The method to get the download
-	 * @return bool A bool representing the download
+	 * @return bool | null A bool representing the download
 	 */
 	public  function getDownload()
 	{
@@ -34,7 +34,7 @@ class FillableFormOptions implements Model
 
 	/**
 	 * The method to get the print
-	 * @return bool A bool representing the print
+	 * @return bool | null A bool representing the print
 	 */
 	public  function getPrint()
 	{
@@ -55,7 +55,7 @@ class FillableFormOptions implements Model
 
 	/**
 	 * The method to get the submit
-	 * @return bool A bool representing the submit
+	 * @return bool | null A bool representing the submit
 	 */
 	public  function getSubmit()
 	{
@@ -77,7 +77,7 @@ class FillableFormOptions implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

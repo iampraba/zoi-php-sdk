@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class WatermarkSettings implements Model
 {
@@ -17,7 +17,7 @@ class WatermarkSettings implements Model
 
 	/**
 	 * The method to get the text
-	 * @return string A string representing the text
+	 * @return string | null A string representing the text
 	 */
 	public  function getText()
 	{
@@ -38,7 +38,7 @@ class WatermarkSettings implements Model
 
 	/**
 	 * The method to get the type
-	 * @return string A string representing the type
+	 * @return string | null A string representing the type
 	 */
 	public  function getType()
 	{
@@ -59,7 +59,7 @@ class WatermarkSettings implements Model
 
 	/**
 	 * The method to get the orientation
-	 * @return string A string representing the orientation
+	 * @return string | null A string representing the orientation
 	 */
 	public  function getOrientation()
 	{
@@ -80,7 +80,7 @@ class WatermarkSettings implements Model
 
 	/**
 	 * The method to get the fontName
-	 * @return string A string representing the fontName
+	 * @return string | null A string representing the fontName
 	 */
 	public  function getFontName()
 	{
@@ -101,7 +101,7 @@ class WatermarkSettings implements Model
 
 	/**
 	 * The method to get the fontSize
-	 * @return int A int representing the fontSize
+	 * @return int | null A int representing the fontSize
 	 */
 	public  function getFontSize()
 	{
@@ -122,7 +122,7 @@ class WatermarkSettings implements Model
 
 	/**
 	 * The method to get the fontColor
-	 * @return string A string representing the fontColor
+	 * @return string | null A string representing the fontColor
 	 */
 	public  function getFontColor()
 	{
@@ -143,7 +143,7 @@ class WatermarkSettings implements Model
 
 	/**
 	 * The method to get the opacity
-	 * @return float A float representing the opacity
+	 * @return float | null A float representing the opacity
 	 */
 	public  function getOpacity()
 	{
@@ -165,7 +165,7 @@ class WatermarkSettings implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

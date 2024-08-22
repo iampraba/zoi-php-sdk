@@ -1,8 +1,8 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\StreamWrapper;
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\StreamWrapper;
+use com\zoho\officeintegrator\util\Model;
 
 class FillableLinkParameters implements Model
 {
@@ -19,7 +19,7 @@ class FillableLinkParameters implements Model
 
 	/**
 	 * The method to get the document
-	 * @return StreamWrapper An instance of StreamWrapper
+	 * @return StreamWrapper | null An instance of StreamWrapper
 	 */
 	public  function getDocument()
 	{
@@ -40,7 +40,7 @@ class FillableLinkParameters implements Model
 
 	/**
 	 * The method to get the url
-	 * @return string A string representing the url
+	 * @return string | null A string representing the url
 	 */
 	public  function getUrl()
 	{
@@ -61,7 +61,7 @@ class FillableLinkParameters implements Model
 
 	/**
 	 * The method to get the documentInfo
-	 * @return DocumentInfo An instance of DocumentInfo
+	 * @return DocumentInfo | null An instance of DocumentInfo
 	 */
 	public  function getDocumentInfo()
 	{
@@ -82,7 +82,7 @@ class FillableLinkParameters implements Model
 
 	/**
 	 * The method to get the userInfo
-	 * @return UserInfo An instance of UserInfo
+	 * @return UserInfo | null An instance of UserInfo
 	 */
 	public  function getUserInfo()
 	{
@@ -103,7 +103,7 @@ class FillableLinkParameters implements Model
 
 	/**
 	 * The method to get the prefillData
-	 * @return array A array representing the prefillData
+	 * @return array | null A array representing the prefillData
 	 */
 	public  function getPrefillData()
 	{
@@ -124,7 +124,7 @@ class FillableLinkParameters implements Model
 
 	/**
 	 * The method to get the formLanguage
-	 * @return string A string representing the formLanguage
+	 * @return string | null A string representing the formLanguage
 	 */
 	public  function getFormLanguage()
 	{
@@ -145,7 +145,7 @@ class FillableLinkParameters implements Model
 
 	/**
 	 * The method to get the submitSettings
-	 * @return FillableSubmissionSettings An instance of FillableSubmissionSettings
+	 * @return FillableSubmissionSettings | null An instance of FillableSubmissionSettings
 	 */
 	public  function getSubmitSettings()
 	{
@@ -166,7 +166,7 @@ class FillableLinkParameters implements Model
 
 	/**
 	 * The method to get the formOptions
-	 * @return FillableFormOptions An instance of FillableFormOptions
+	 * @return FillableFormOptions | null An instance of FillableFormOptions
 	 */
 	public  function getFormOptions()
 	{
@@ -188,7 +188,7 @@ class FillableLinkParameters implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

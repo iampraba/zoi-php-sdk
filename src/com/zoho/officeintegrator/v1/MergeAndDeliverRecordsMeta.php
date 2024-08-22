@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class MergeAndDeliverRecordsMeta implements Model
 {
@@ -14,7 +14,7 @@ class MergeAndDeliverRecordsMeta implements Model
 
 	/**
 	 * The method to get the downloadLink
-	 * @return string A string representing the downloadLink
+	 * @return string | null A string representing the downloadLink
 	 */
 	public  function getDownloadLink()
 	{
@@ -35,7 +35,7 @@ class MergeAndDeliverRecordsMeta implements Model
 
 	/**
 	 * The method to get the email
-	 * @return string A string representing the email
+	 * @return string | null A string representing the email
 	 */
 	public  function getEmail()
 	{
@@ -56,7 +56,7 @@ class MergeAndDeliverRecordsMeta implements Model
 
 	/**
 	 * The method to get the name
-	 * @return string A string representing the name
+	 * @return string | null A string representing the name
 	 */
 	public  function getName()
 	{
@@ -77,7 +77,7 @@ class MergeAndDeliverRecordsMeta implements Model
 
 	/**
 	 * The method to get the status
-	 * @return string A string representing the status
+	 * @return string | null A string representing the status
 	 */
 	public  function getStatus()
 	{
@@ -99,7 +99,7 @@ class MergeAndDeliverRecordsMeta implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

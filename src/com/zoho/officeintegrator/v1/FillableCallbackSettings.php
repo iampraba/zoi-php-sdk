@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class FillableCallbackSettings implements Model
 {
@@ -15,7 +15,7 @@ class FillableCallbackSettings implements Model
 
 	/**
 	 * The method to get the output
-	 * @return FillableLinkOutputSettings An instance of FillableLinkOutputSettings
+	 * @return FillableLinkOutputSettings | null An instance of FillableLinkOutputSettings
 	 */
 	public  function getOutput()
 	{
@@ -36,7 +36,7 @@ class FillableCallbackSettings implements Model
 
 	/**
 	 * The method to get the url
-	 * @return string A string representing the url
+	 * @return string | null A string representing the url
 	 */
 	public  function getUrl()
 	{
@@ -57,7 +57,7 @@ class FillableCallbackSettings implements Model
 
 	/**
 	 * The method to get the httpMethodType
-	 * @return string A string representing the httpMethodType
+	 * @return string | null A string representing the httpMethodType
 	 */
 	public  function getHttpMethodType()
 	{
@@ -78,7 +78,7 @@ class FillableCallbackSettings implements Model
 
 	/**
 	 * The method to get the retries
-	 * @return int A int representing the retries
+	 * @return int | null A int representing the retries
 	 */
 	public  function getRetries()
 	{
@@ -99,7 +99,7 @@ class FillableCallbackSettings implements Model
 
 	/**
 	 * The method to get the timeout
-	 * @return int A int representing the timeout
+	 * @return int | null A int representing the timeout
 	 */
 	public  function getTimeout()
 	{
@@ -121,7 +121,7 @@ class FillableCallbackSettings implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

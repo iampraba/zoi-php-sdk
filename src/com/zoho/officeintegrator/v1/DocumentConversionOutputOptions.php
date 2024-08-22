@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class DocumentConversionOutputOptions implements Model
 {
@@ -15,7 +15,7 @@ class DocumentConversionOutputOptions implements Model
 
 	/**
 	 * The method to get the format
-	 * @return string A string representing the format
+	 * @return string | null A string representing the format
 	 */
 	public  function getFormat()
 	{
@@ -36,7 +36,7 @@ class DocumentConversionOutputOptions implements Model
 
 	/**
 	 * The method to get the documentName
-	 * @return string A string representing the documentName
+	 * @return string | null A string representing the documentName
 	 */
 	public  function getDocumentName()
 	{
@@ -57,7 +57,7 @@ class DocumentConversionOutputOptions implements Model
 
 	/**
 	 * The method to get the password
-	 * @return string A string representing the password
+	 * @return string | null A string representing the password
 	 */
 	public  function getPassword()
 	{
@@ -78,7 +78,7 @@ class DocumentConversionOutputOptions implements Model
 
 	/**
 	 * The method to get the includeChanges
-	 * @return string A string representing the includeChanges
+	 * @return string | null A string representing the includeChanges
 	 */
 	public  function getIncludeChanges()
 	{
@@ -99,7 +99,7 @@ class DocumentConversionOutputOptions implements Model
 
 	/**
 	 * The method to get the includeComments
-	 * @return string A string representing the includeComments
+	 * @return string | null A string representing the includeComments
 	 */
 	public  function getIncludeComments()
 	{
@@ -121,7 +121,7 @@ class DocumentConversionOutputOptions implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

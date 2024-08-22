@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class PlanDetails implements Model, ResponseHandler
 {
@@ -24,7 +24,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the usageLimit
-	 * @return string A string representing the usageLimit
+	 * @return string | null A string representing the usageLimit
 	 */
 	public  function getUsageLimit()
 	{
@@ -45,7 +45,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the apikeyGeneratedTime
-	 * @return string A string representing the apikeyGeneratedTime
+	 * @return string | null A string representing the apikeyGeneratedTime
 	 */
 	public  function getApikeyGeneratedTime()
 	{
@@ -66,7 +66,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the remainingUsageLimit
-	 * @return string A string representing the remainingUsageLimit
+	 * @return string | null A string representing the remainingUsageLimit
 	 */
 	public  function getRemainingUsageLimit()
 	{
@@ -87,7 +87,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the lastPaymentDateMs
-	 * @return string A string representing the lastPaymentDateMs
+	 * @return string | null A string representing the lastPaymentDateMs
 	 */
 	public  function getLastPaymentDateMs()
 	{
@@ -108,7 +108,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the nextPaymentDateMs
-	 * @return string A string representing the nextPaymentDateMs
+	 * @return string | null A string representing the nextPaymentDateMs
 	 */
 	public  function getNextPaymentDateMs()
 	{
@@ -129,7 +129,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the lastPaymentDate
-	 * @return string A string representing the lastPaymentDate
+	 * @return string | null A string representing the lastPaymentDate
 	 */
 	public  function getLastPaymentDate()
 	{
@@ -150,7 +150,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the apikeyId
-	 * @return string A string representing the apikeyId
+	 * @return string | null A string representing the apikeyId
 	 */
 	public  function getApikeyId()
 	{
@@ -171,7 +171,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the planName
-	 * @return string A string representing the planName
+	 * @return string | null A string representing the planName
 	 */
 	public  function getPlanName()
 	{
@@ -192,7 +192,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the apikeyGeneratedTimeMs
-	 * @return string A string representing the apikeyGeneratedTimeMs
+	 * @return string | null A string representing the apikeyGeneratedTimeMs
 	 */
 	public  function getApikeyGeneratedTimeMs()
 	{
@@ -213,7 +213,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the paymentLink
-	 * @return string A string representing the paymentLink
+	 * @return string | null A string representing the paymentLink
 	 */
 	public  function getPaymentLink()
 	{
@@ -234,7 +234,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the nextPaymentDate
-	 * @return string A string representing the nextPaymentDate
+	 * @return string | null A string representing the nextPaymentDate
 	 */
 	public  function getNextPaymentDate()
 	{
@@ -255,7 +255,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the subscriptionInterval
-	 * @return string A string representing the subscriptionInterval
+	 * @return string | null A string representing the subscriptionInterval
 	 */
 	public  function getSubscriptionInterval()
 	{
@@ -276,7 +276,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the totalUsage
-	 * @return string A string representing the totalUsage
+	 * @return string | null A string representing the totalUsage
 	 */
 	public  function getTotalUsage()
 	{
@@ -297,7 +297,7 @@ class PlanDetails implements Model, ResponseHandler
 
 	/**
 	 * The method to get the subscriptionPeriod
-	 * @return string A string representing the subscriptionPeriod
+	 * @return string | null A string representing the subscriptionPeriod
 	 */
 	public  function getSubscriptionPeriod()
 	{
@@ -319,7 +319,7 @@ class PlanDetails implements Model, ResponseHandler
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

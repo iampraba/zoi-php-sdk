@@ -1,8 +1,10 @@
-# Zoho Office Integrator PHP SDK
+<a href="https://zoho.com/catalyst/">
+    <img width="300" src="https://www.zohowebstatic.com/sites/zweb/images/productlogos/officeintegrator.svg">
+</a>
 
-[![PHP Version Require](http://poser.pugx.org/officeintegrator/zoi-php-sdk/require/php)](https://packagist.org/packages/officeintegrator/zoi-php-sdk)
-[![Downloads](https://poser.pugx.org/officeintegrator/zoi-php-sdk/d/total.svg)](https://packagist.org/packages/officeintegrator/zoi-php-sdk)
-[![License](https://poser.pugx.org/officeintegrator/zoi-php-sdk/license.svg)](https://packagist.org/packages/officeintegrator/zoi-php-sdk)
+# PHP SDK
+
+[![PHP Version Require](http://poser.pugx.org/officeintegrator/zoi-php-sdk/require/php)](https://packagist.org/packages/officeintegrator/zoi-php-sdk) [![Downloads](https://poser.pugx.org/officeintegrator/zoi-php-sdk/d/total.svg)](https://packagist.org/packages/officeintegrator/zoi-php-sdk) [![License](https://poser.pugx.org/officeintegrator/zoi-php-sdk/license.svg)](https://packagist.org/packages/officeintegrator/zoi-php-sdk)
 
 ## Table Of Contents
 
@@ -58,51 +60,33 @@ You can include the SDK to your project using:
 
 Before you get started with creating your PHP application, you need to register with Zoho Office Integrator to get an apikey for authentication. 
 
-- Create an instance of **UserSignature** Class that identifies the current user(User who create the apikey).
-
-    ```php
-    use com\zoho\UserSignature;
-    //Create an UserSignature instance that takes user Email as parameter
-    $user = new UserSignature("john@zylker.com")
-    ```
-
 - Configure **API environment** which decides the domain and the URL to make API calls.
 
     ```php
-    use com\zoho\dc\DataCenter;
-
     /*
-     * Configure the environment
-     * Pass the below domain values based in which data center you signup for apikey. 
-     * USDataCenter - https://api.office-integrator.com
-     * EUDataCenter - https://api.office-integrator.eu
-     * INDataCenter - https://api.office-integrator.in
-     * CNDataCenter - https://api.office-integrator.com.cn
-     * AUDataCenter - https://api.office-integrator.com.au
-     * JPDataCenter - https://api.office-integrator.jp
+     * Refer this help page for api end point domain details -  https://www.zoho.com/officeintegrator/api/v1/getting-started.html
     */
-    $environment = DataCenter::setEnvironment("https://api.office-integrator.com", null, null, null);
+    $environment = new Production("https://api.office-integrator.com");
     ```
 
-- Create an instance of **APIKey** with the information that you get after registering with Office Integrator.
+- Use below script to configure your apikey that you get from [Zoho Office Integrator](https://officeintegrator.zoho.com) dashboard.
 
     ```php
-    use com\zoho\api\authenticator\APIKey;
-    use com\zoho\util\Constants;
-
     /**
      * You can configure where the apikey needs to added in the request object.
-     * User can either pass the apikey in the parameter(Constants.PARAMS) or (Constants.HEADERS)
+     * User can either pass the apikey in the addParam or addHeader method
      */
+    $authBuilder = new AuthBuilder();
+    $authentication = new Authentication();
+    $authBuilder->addParam("apikey", "2ae438cf864488657cc9754a27daa480");
+    $authBuilder->authenticationSchema($authentication->getTokenFlow());
+    $tokens = [ $authBuilder->build() ];
     $apikey = new APIKey("2ae438cf864488657cc9754a27daa480", Constants::PARAMS);
     ```
 
 - Create an instance of **Logger** Class to log exception and API information. By default, the SDK constructs a Logger instance with level - INFO and file_path - (sdk_logs.log parallel to node_modules)
 
     ```php
-    use com\zoho\api\logger\Levels;
-    use com\zoho\api\logger\LogBuilder;
-
     /*
     * Create an instance of Logger Class that requires the following
     * level -> Level of the log messages to be logged. Can be configured by typing Levels "." and choose any level from the list displayed.
@@ -120,29 +104,39 @@ Initialize the SDK using the following code.
 
 ```php
 <?php
-use com\zoho\api\authenticator\APIKey;
-use com\zoho\api\logger\Levels;
-use com\zoho\api\logger\LogBuilder;
-use com\zoho\dc\DataCenter;
-use com\zoho\InitializeBuilder;
-use com\zoho\UserSignature;
-use com\zoho\util\Constants;
+
+use com\zoho\api\authenticator\AuthBuilder;
+use com\zoho\officeintegrator\dc\apiserver\Production;
+use com\zoho\officeintegrator\InitializeBuilder;
+use com\zoho\officeintegrator\logger\Levels;
+use com\zoho\officeintegrator\logger\LogBuilder;
+use com\zoho\officeintegrator\v1\Authentication;
 
 require_once 'vendor/autoload.php';
 
-class Initializer {
+class Initialize {
     public static function initializeSdk() {
-        $user = new UserSignature("john@zylker.com");
-        $environment = DataCenter::setEnvironment("https://api.office-integrator.com", null, null, null);
-        $apikey = new APIKey("2ae438cf864488657cc9754a27daa480", Constants::PARAMS);
+
+        # Update the api domain based on in which data center user register your apikey
+        # To know more - https://www.zoho.com/officeintegrator/api/v1/getting-started.html
+        $environment = new Production("https://api.office-integrator.com");
+        # User your apikey that you have in office integrator dashboard
+        //Update this apikey with your own apikey signed up in office inetgrator service
+        $authBuilder = new AuthBuilder();
+        $authentication = new Authentication();
+        $authBuilder->addParam("apikey", "2ae438cf864488657cc9754a27daa480");
+        $authBuilder->authenticationSchema($authentication->getTokenFlow());
+        $tokens = [ $authBuilder->build() ];
+
+        # Configure a proper file path to write the sdk logs
         $logger = (new LogBuilder())
             ->level(Levels::INFO)
             ->filePath("./app.log")
             ->build();
-        $initialize = (new InitializeBuilder())
-            ->user($user)
+        
+        (new InitializeBuilder())
             ->environment($environment)
-            ->token($apikey)
+            ->tokens($tokens)
             ->logger($logger)
             ->initialize();
 
@@ -150,7 +144,7 @@ class Initializer {
     }
 }
 
-Initializer.initializeSdk();
+Initialize::initializeSdk();
 ```
 
 - You can now access the functionalities of the SDK. Refer to the sample codes to make various API calls through the SDK.

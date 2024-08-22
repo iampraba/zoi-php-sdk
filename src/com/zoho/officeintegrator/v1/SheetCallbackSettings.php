@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class SheetCallbackSettings implements Model
 {
@@ -14,7 +14,7 @@ class SheetCallbackSettings implements Model
 
 	/**
 	 * The method to get the saveFormat
-	 * @return string A string representing the saveFormat
+	 * @return string | null A string representing the saveFormat
 	 */
 	public  function getSaveFormat()
 	{
@@ -35,7 +35,7 @@ class SheetCallbackSettings implements Model
 
 	/**
 	 * The method to get the saveUrl
-	 * @return string A string representing the saveUrl
+	 * @return string | null A string representing the saveUrl
 	 */
 	public  function getSaveUrl()
 	{
@@ -56,7 +56,7 @@ class SheetCallbackSettings implements Model
 
 	/**
 	 * The method to get the saveUrlParams
-	 * @return array A array representing the saveUrlParams
+	 * @return array | null A array representing the saveUrlParams
 	 */
 	public  function getSaveUrlParams()
 	{
@@ -77,7 +77,7 @@ class SheetCallbackSettings implements Model
 
 	/**
 	 * The method to get the saveUrlHeaders
-	 * @return array A array representing the saveUrlHeaders
+	 * @return array | null A array representing the saveUrlHeaders
 	 */
 	public  function getSaveUrlHeaders()
 	{
@@ -99,7 +99,7 @@ class SheetCallbackSettings implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

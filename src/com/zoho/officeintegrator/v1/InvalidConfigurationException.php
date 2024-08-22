@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class InvalidConfigurationException implements Model, WriterResponseHandler, SheetResponseHandler, ShowResponseHandler, ResponseHandler
 {
@@ -14,7 +14,7 @@ class InvalidConfigurationException implements Model, WriterResponseHandler, She
 
 	/**
 	 * The method to get the keyName
-	 * @return string A string representing the keyName
+	 * @return string | null A string representing the keyName
 	 */
 	public  function getKeyName()
 	{
@@ -35,7 +35,7 @@ class InvalidConfigurationException implements Model, WriterResponseHandler, She
 
 	/**
 	 * The method to get the code
-	 * @return int A int representing the code
+	 * @return int | null A int representing the code
 	 */
 	public  function getCode()
 	{
@@ -56,7 +56,7 @@ class InvalidConfigurationException implements Model, WriterResponseHandler, She
 
 	/**
 	 * The method to get the parameterName
-	 * @return string A string representing the parameterName
+	 * @return string | null A string representing the parameterName
 	 */
 	public  function getParameterName()
 	{
@@ -77,7 +77,7 @@ class InvalidConfigurationException implements Model, WriterResponseHandler, She
 
 	/**
 	 * The method to get the message
-	 * @return string A string representing the message
+	 * @return string | null A string representing the message
 	 */
 	public  function getMessage()
 	{
@@ -99,7 +99,7 @@ class InvalidConfigurationException implements Model, WriterResponseHandler, She
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{

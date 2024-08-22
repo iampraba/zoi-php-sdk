@@ -1,7 +1,7 @@
 <?php 
 namespace com\zoho\officeintegrator\v1;
 
-use com\zoho\util\Model;
+use com\zoho\officeintegrator\util\Model;
 
 class CallbackSettings implements Model
 {
@@ -17,7 +17,7 @@ class CallbackSettings implements Model
 
 	/**
 	 * The method to get the saveFormat
-	 * @return string A string representing the saveFormat
+	 * @return string | null A string representing the saveFormat
 	 */
 	public  function getSaveFormat()
 	{
@@ -38,7 +38,7 @@ class CallbackSettings implements Model
 
 	/**
 	 * The method to get the saveUrl
-	 * @return string A string representing the saveUrl
+	 * @return string | null A string representing the saveUrl
 	 */
 	public  function getSaveUrl()
 	{
@@ -59,7 +59,7 @@ class CallbackSettings implements Model
 
 	/**
 	 * The method to get the httpMethodType
-	 * @return string A string representing the httpMethodType
+	 * @return string | null A string representing the httpMethodType
 	 */
 	public  function getHttpMethodType()
 	{
@@ -80,7 +80,7 @@ class CallbackSettings implements Model
 
 	/**
 	 * The method to get the retries
-	 * @return int A int representing the retries
+	 * @return int | null A int representing the retries
 	 */
 	public  function getRetries()
 	{
@@ -101,7 +101,7 @@ class CallbackSettings implements Model
 
 	/**
 	 * The method to get the timeout
-	 * @return int A int representing the timeout
+	 * @return int | null A int representing the timeout
 	 */
 	public  function getTimeout()
 	{
@@ -122,7 +122,7 @@ class CallbackSettings implements Model
 
 	/**
 	 * The method to get the saveUrlParams
-	 * @return array A array representing the saveUrlParams
+	 * @return array | null A array representing the saveUrlParams
 	 */
 	public  function getSaveUrlParams()
 	{
@@ -143,7 +143,7 @@ class CallbackSettings implements Model
 
 	/**
 	 * The method to get the saveUrlHeaders
-	 * @return array A array representing the saveUrlHeaders
+	 * @return array | null A array representing the saveUrlHeaders
 	 */
 	public  function getSaveUrlHeaders()
 	{
@@ -165,7 +165,7 @@ class CallbackSettings implements Model
 	/**
 	 * The method to check if the user has modified the given key
 	 * @param string $key A string
-	 * @return int A int representing the modification
+	 * @return int | null A int representing the modification
 	 */
 	public  function isKeyModified(string $key)
 	{
